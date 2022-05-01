@@ -26,7 +26,7 @@
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
                                 <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $_SESSION['nombre']; ?></h1>
-                                <p class="lead text-muted">Revisa las últimas publicaciones</p>
+                                <p class="lead text-muted">Revisa las últimas publicaciones, probando</p>
                             </div>
                         </div>
                     </div>
