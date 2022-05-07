@@ -62,24 +62,16 @@ a:hover {
     border-right: 1px solid var(--grey);
 }
 
-#titulo{
+#titulo_pub{
     width: 250px;
 }
 
-#titulo{
-    width: 250px;
-}
-
-#info_post{
+#desc_pub{
     width: 250px;
 	height: 100px;
 }
 
-#precio_post{
-    width: 250px;
-}
-
-#contacto{
+#contacto_pub{
     width: 250px;
 }
 

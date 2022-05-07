@@ -1,7 +1,7 @@
 <?php
 include('../conexion/conexion.php');
 # definimos la carpeta destino
-$carpetaDestino = "../assets/imagenes/";
+$carpetaDestino = "../assets/imagenes_publicacion/";
 
 # si hay algun archivo que subir
 if (isset($_FILES["archivo"]) && $_FILES["archivo"]["name"]) {
@@ -32,14 +32,11 @@ if (isset($_FILES["archivo"]) && $_FILES["archivo"]["name"]) {
 if(!empty($_POST))
 {
     $output = '';
-    $titulo = mysqli_real_escape_string($conexion, $_POST["titulo"]);  
-    $info_post = mysqli_real_escape_string($conexion, $_POST["info_post"]);  
-    $precio_post = mysqli_real_escape_string($conexion, $_POST["precio_post"]);  
-    //$disponibilidad = mysqli_real_escape_string($conexion, $_POST["disponibilidad"]);  
-    $contacto = mysqli_real_escape_string($conexion, $_POST["contacto"]);
-    //$id_imagen = mysqli_real_escape_string($conexion, $_POST["id_imagen"]);
-    $query = " INSERT INTO publicacion (titulo, info_post, precio_post, contacto, id_imagen)  
-     VALUES('$titulo', '$info_post', $precio_post, '$contacto', '$destino')";
+    $titulo_pub = mysqli_real_escape_string($conexion, $_POST["titulo_pub"]);  
+    $desc_pub = mysqli_real_escape_string($conexion, $_POST["desc_pub"]);  
+    $contacto_pub = mysqli_real_escape_string($conexion, $_POST["contacto_pub"]);
+    $query = " INSERT INTO publicacion (titulo_pub, desc_pub, contacto_pub, imagen_pub)  
+     VALUES('$titulo_pub', '$desc_pub', '$contacto_pub', '$destino')";
     if(mysqli_query($conexion, $query))
     {
      $output.= '<label class="text-success">Registro Insertado Correctamente</label>';
