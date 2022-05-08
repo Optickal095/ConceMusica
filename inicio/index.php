@@ -29,10 +29,10 @@
                                 <p class="lead text-muted">Revisa las últimas publicaciones</p>
                             </div>
                             <div class="col-lg-6 col-md-5 d-flex">
-                                <button class="btn btn-info w-50 align-self-center form-control" data-toggle="modal" data-target="#agregarPublicacion"> <i class="fas fa-plus-square"></i> Agregar publicacion</button>
+                                <button class="btn btn-danger w-50 align-self-center form-control" data-toggle="modal" data-target="#agregarPublicacion"> <i class="fas fa-plus-square"></i> Agregar publicacion</button>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
-                                <button class="btn btn-primary w-100 align-self-center editar-publicacion" data-toggle="modal" data-target="#modificarPublicacion"><i class="fas fa-edit"></i> Editar publicacion</button>
+                                <button class="btn btn-secondary w-100 align-self-center editar-publicacion" data-toggle="modal" data-target="#modificarPublicacion"><i class="fas fa-edit"></i> Editar publicacion</button>
                             </div>
                         </div>
                     </div>

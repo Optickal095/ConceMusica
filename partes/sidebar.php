@@ -1,5 +1,6 @@
 <!-- Sidebar -->
-<div id="sidebar-container" class="bg-info">
+
+<div id="sidebar-container" class="bg-danger">
     <div class="logo">
         <h4 class="text-light font-weight-bold mb-0">ConceMúsica</h4>
     </div>
