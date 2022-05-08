@@ -11,10 +11,12 @@
 <body>
    <form action="../login/validacion.php" method="POST">
    <h1 class="animate__animated animate__backInLeft">Conce Música</h1>
-   <p>Correo electronico <input type="text" placeholder="ingrese su correo" name="email"></p>
-   <p>Contraseña <input type="password" placeholder="ingrese su contraseña" name="pass"></p>
+   <p>Correo electronico <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]" title="Inserte un email válido" placeholder="ingrese su correo" name="email"></p>
+   <p>Contraseña <input type="password" placeholder="ingrese su contraseña" name="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"></p>
    <input type="submit" value="Ingresar">
    
+   <h6>Credenciales: email: 1@1 pass: aA1</h6>
+   <h6>Credenciales: email: 2@2 pass: bB2</h6>
    </form> 
 </body>
 </html>

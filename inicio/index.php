@@ -25,7 +25,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
-                                <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $_SESSION['nombre']; ?></h1>
+                                <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $_SESSION['nombre_user']; ?></h1>
                                 <p class="lead text-muted">Revisa las últimas publicaciones</p>
                             </div>
                             <div class="col-lg-6 col-md-5 d-flex">
