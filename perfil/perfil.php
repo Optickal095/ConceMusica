@@ -32,21 +32,21 @@
         <section class="bg-mix py-3">
           <div class="container-fluid">
 
-            <?php $perfil = "SELECT * FROM musicos WHERE email_mus = '$email'"; ?>
+            <?php $perfil = "SELECT * FROM usuario WHERE email_us = '$email'"; ?>
             <?php $resultadoPerfil = mysqli_query($conexion, $perfil) ?>
             <?php if ($mostrarPerfil = mysqli_fetch_array($resultadoPerfil)) { ?>
-              <h1 class="text-info" style="margin-left: 2rem;"> <?php echo $mostrarPerfil['name_mus']?> </h1>
+              <h1 class="text-info" style="margin-left: 2rem;"> <?php echo $mostrarPerfil['name_us']?> </h1>
               <br>
               <div class="row">
                 <div class="col-lg-3" style="margin-left: 2rem;">
-                  <img src="<?php echo $mostrarPerfil['logo']; ?>" style="width:60%; height:80%">
+                  <img src="<?php echo $mostrarPerfil['imagen_us']; ?>" style="width:60%; height:80%">
                 </div>
                 <div class="col-lg-8">
-                  <label for="correoPerfil" style="font-size: 1.5rem">Correo: <?php echo $mostrarPerfil['email_mus']; ?></label>
+                  <label for="correoPerfil" style="font-size: 1.5rem">Correo: <?php echo $mostrarPerfil['email_us']; ?></label>
                   <br>
-                  <label for="descripcionPerfil" style="font-size: 1.5rem">Descripción: <?php echo $mostrarPerfil['desc_mus']; ?></label>
+                  <label for="descripcionPerfil" style="font-size: 1.5rem">Descripción: <?php echo $mostrarPerfil['desc_us']; ?></label>
                   <br>
-                  <label for="contactoPerfil" style="font-size: 1.5rem">Contacto: <?php echo $mostrarPerfil['tel_mus']; ?></label>
+                  <label for="contactoPerfil" style="font-size: 1.5rem">Contacto: <?php echo $mostrarPerfil['tel_us']; ?></label>
                   <br>
                 <?php } ?>
                 </div>
@@ -55,18 +55,11 @@
         </section>
 
         <br><br>
-        <section>
-          <div class="container">
-            <h3>_____________________</h3>
-            <h3>Acá va la valoración!</h3>
-            <h3>_____________________</h3>
-          </div>
-        </section>
         <br><br>
         <section>
           <div class="container">
             <h3>__________________________</h3>
-            <h3>Acá van las publicaciones!</h3>
+            <h3>Acá van las canciones!</h3>
             <h3>__________________________</h3>
           </div>
         </section>

@@ -13,14 +13,14 @@
                 <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="buscador">
                 <button class="btn position-absolute btn-search" type="submit" name="submit-buscador"><i class="icon ion-md-search"></i></button>
             </form>
-            <?php $query = " SELECT * FROM musicos WHERE email_mus = '$email'"?>
+            <?php $query = " SELECT * FROM usuario WHERE email_us = '$email'"?>
             <?php $resultadoQuery = mysqli_query($conexion, $query)?>
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="float:right">
                         <?php if($row = mysqli_fetch_assoc($resultadoQuery)) { ?>
-                        <img src="<?php echo $row['logo'];?>" class="img-fluid rounded-circle avatar mr-2" alt="imagen" />
-                        <?php echo $row['name_mus']; ?>
+                        <img src="<?php echo $row['imagen_us'];?>" class="img-fluid rounded-circle avatar mr-2" alt="imagen" />
+                        <?php echo $row['name_us']; ?>
                         <?php } ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
