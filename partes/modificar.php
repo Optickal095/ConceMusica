@@ -2,7 +2,7 @@
 include('../conexion/conexion.php');
 
 # definimos la carpeta destino
-$carpetaDestino = "../assets/imagenes/";
+$carpetaDestino = "../assets/imagenes_publicacion/";
 
 # si hay algun archivo que subir
 if (isset($_FILES["archivo"]) && $_FILES["archivo"]["name"]) {
@@ -31,14 +31,11 @@ if (isset($_FILES["archivo"]) && $_FILES["archivo"]["name"]) {
 if(!empty($_POST))
 {
     $output = '';
-    $id_post = mysqli_real_escape_string($conexion, $_POST["id_post"]); 
-    $titulo = mysqli_real_escape_string($conexion, $_POST["titulo"]);  
-    $info_post = mysqli_real_escape_string($conexion, $_POST["info_post"]);  
-    $precio_post = mysqli_real_escape_string($conexion, $_POST["precio_post"]);  
-    //$disponibilidad = mysqli_real_escape_string($conexion, $_POST["disponibilidad"]);  
-    $contacto = mysqli_real_escape_string($conexion, $_POST["contacto"]);
-    //$id_imagen = mysqli_real_escape_string($conexion, $_POST["id_imagen"]);
-    $query = " UPDATE publicacion SET titulo = '$_POST[titulo]', info_post = '$_POST[info_post]', precio_post = '$_POST[precio_post]', contacto = '$_POST[contacto]', id_imagen = '$destino' WHERE id_post = '$_POST[id_post]'";
+    $id_pub = mysqli_real_escape_string($conexion, $_POST["id_pub"]); 
+    $titulo_pub = mysqli_real_escape_string($conexion, $_POST["titulo_pub"]);  
+    $desc_pub = mysqli_real_escape_string($conexion, $_POST["desc_pub"]);  
+    $contacto_pub = mysqli_real_escape_string($conexion, $_POST["contacto_pub"]);
+    $query = " UPDATE publicacion SET titulo_pub = '$_POST[titulo_pub]', desc_pub = '$_POST[desc_pub]', contacto_pub = '$_POST[contacto_pub]', imagen_pub = '$destino' WHERE id_pub = '$_POST[id_pub]'";
     if(mysqli_query($conexion, $query))
     {
      $output.= '<label class="text-success">Registro Insertado Correctamente</label>';

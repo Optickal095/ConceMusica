@@ -143,7 +143,7 @@
                     <form method="POST" enctype="multipart/form-data" action="../partes/modificar.php">
                         <div class="row">
                             <div class="form-group col-3">
-                                <input type="text" id="titulo" class="form-control" name="titulo" placeholder="Título" required>
+                                <input type="text" id="titulo_pub" class="form-control" name="titulo_pub" placeholder="Título" required>
                             </div>
                         </div>
 
@@ -168,12 +168,12 @@
                             <div class="for-group col-10">
                                 <label for="img">Selecciona una Imagen:</label>
                                 <input type="file" accept="image/*" onchange="loadFile(event)" name="archivo">
-                                <img id="id_imagen" style="width:100%; margin-top:10px;" />
+                                <img id="imagen_pub" style="width:100%; margin-top:10px;" />
                                 <script>
                                     var loadFile = function(event) {
                                         var reader = new FileReader();
                                         reader.onload = function() {
-                                            var output = document.getElementById('id_imagen');
+                                            var output = document.getElementById('imagen_pub');
                                             output.src = reader.result;
                                         };
                                         reader.readAsDataURL(event.target.files[0]);
@@ -184,19 +184,13 @@
                         <br><br>
                         <div class="row">
                             <div class="form-group col-3">
-                                <input type="text" id="info_post" class="form-control" name="info_post" placeholder="Descripción" required>
+                                <input type="text" id="desc_pub" class="form-control" name="desc_pub" placeholder="Descripción" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="form-group col-3">
-                                <input type="number" id="precio_post" class="form-control" name="precio_post" placeholder="Precio" required>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-3">
-                                <input type="text" id="contacto" class="form-control" name="contacto" placeholder="Contacto" required>
+                                <input type="text" id="contacto_pub" class="form-control" name="contacto_pub" placeholder="Contacto" required>
                             </div>
                         </div>
                         <br><br>
