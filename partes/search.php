@@ -40,7 +40,8 @@
                                                         <img src="<?php print $row['imagen_pub']; ?>" class="card-img-top">
                                                         <div class="card-body">
                                                             <h5 class="text-muted"><?php echo $row['desc_pub'] ?></h5>
-                                                            <h6 class="text-warning"><i class="fas fa-phone-square-alt"></i></span><?php echo $row['contacto_pub'] ?></h6>
+                                                            <h6 class="text-danger"><i class="fas fa-envelope"></i></span><?php echo " " .$row['email_pub']?></h6>
+                                                            <h6 class="text-warning"><i class="fas fa-phone-square-alt"></i></span><?php echo $row['tel_pub'] ?></h6>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -35,7 +35,7 @@
             <?php $perfil = "SELECT * FROM usuario WHERE email_us = '$email'"; ?>
             <?php $resultadoPerfil = mysqli_query($conexion, $perfil) ?>
             <?php if ($mostrarPerfil = mysqli_fetch_array($resultadoPerfil)) { ?>
-              <h1 class="text-info" style="margin-left: 2rem;"> <?php echo $mostrarPerfil['name_us']?> </h1>
+              <h1 class="text-info" style="margin-left: 2rem;"> <?php echo $mostrarPerfil['name_us'] ?> </h1>
               <br>
               <div class="row">
                 <div class="col-lg-3" style="margin-left: 2rem;">
@@ -58,9 +58,10 @@
         <br><br>
         <section>
           <div class="container">
-            <h3>__________________________</h3>
-            <h3>Acá van las canciones!</h3>
-            <h3>__________________________</h3>
+            <label for="muestra_1" style="font-size: 1.5rem">Cancion test 1:</label><br>
+            <audio controls autoplay src="../assets/cancion/muestra_1.mp3"></audio><br>
+            <label for="muestra_1" style="font-size: 1.5rem">Cancion test 2:</label><br>
+            <audio controls autoplay src="../assets/cancion/muestra_2.mp3"></audio><br>
           </div>
         </section>
 

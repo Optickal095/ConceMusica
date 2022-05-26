@@ -34,8 +34,9 @@ if(!empty($_POST))
     $id_pub = mysqli_real_escape_string($conexion, $_POST["id_pub"]); 
     $titulo_pub = mysqli_real_escape_string($conexion, $_POST["titulo_pub"]);  
     $desc_pub = mysqli_real_escape_string($conexion, $_POST["desc_pub"]);  
-    $contacto_pub = mysqli_real_escape_string($conexion, $_POST["contacto_pub"]);
-    $query = " UPDATE publicacion SET titulo_pub = '$_POST[titulo_pub]', desc_pub = '$_POST[desc_pub]', contacto_pub = '$_POST[contacto_pub]', imagen_pub = '$destino' WHERE id_pub = '$_POST[id_pub]'";
+    $tel_pub = mysqli_real_escape_string($conexion, $_POST["tel_pub"]);
+    $email_pub = mysqli_real_escape_string($conexion, $_POST["email_pub"]);
+    $query = " UPDATE publicacion SET titulo_pub = '$_POST[titulo_pub]', desc_pub = '$_POST[desc_pub]', tel_pub = '$_POST[tel_pub]', email_pub = '$_POST[email_pub]', imagen_pub = '$destino' WHERE id_pub = '$_POST[id_pub]'";
     if(mysqli_query($conexion, $query))
     {
      $output.= '<label class="text-success">Registro Insertado Correctamente</label>';

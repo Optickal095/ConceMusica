@@ -44,7 +44,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <?php
-
+                                    # Listar publicaciones
                                     $consulta = "SELECT*FROM publicacion";
 
                                     $resultado = mysqli_query($conexion, $consulta);
@@ -59,7 +59,8 @@
                                                     <h3 class="text-muted"><?php echo $mostrar['titulo_pub'] ?></h3>
                                                     <h5 class="text-muted"><?php echo $mostrar['desc_pub'] ?></h5>
 
-                                                    <h6 class="text-warning"><i class="fas fa-phone-square-alt"></i></span><?php echo $mostrar['contacto_pub'] ?></h6>
+                                                    <h6 class="text-danger"><i class="fas fa-envelope"></i></span><?php echo " " .$mostrar['email_pub']?></h6>
+                                                    <h6 class="text-warning"><i class="fas fa-phone-square-alt"></i></span><?php echo $mostrar['tel_pub'] ?></h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,7 +96,7 @@
                         <div class="row">
                             <div class="for-group col-10">
                                 <label for="img">Selecciona una Imagen:</label>
-                                <input type="file" accept="image/*" onchange="loadFile(event)" name="archivo">
+                                <input type="file" accept="image/*" onchange="loadFile(event)" name="archivo" required>
                                 <img id="imagen_pub" style="width:100%; margin-top:10px;" />
                                 <script>
                                     var loadFile = function(event) {
@@ -117,7 +118,12 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-3">
-                                <input type="text" id="contacto_pub" class="form-control" name="contacto_pub" placeholder="Contacto" required>
+                                <input type="text" id="tel_pub" class="form-control" name="tel_pub" placeholder="Contacto" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <input type="text" id="email_pub" class="form-control" name="email_pub" placeholder="Email" required>
                             </div>
                         </div>
                         <br><br>
@@ -191,7 +197,12 @@
 
                         <div class="row">
                             <div class="form-group col-3">
-                                <input type="text" id="contacto_pub" class="form-control" name="contacto_pub" placeholder="Contacto" required>
+                                <input type="text" id="tel_pub" class="form-control" name="tel_pub" placeholder="Contacto" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <input type="text" id="email_pub" class="form-control" name="email_pub" placeholder="Email" required>
                             </div>
                         </div>
                         <br><br>
