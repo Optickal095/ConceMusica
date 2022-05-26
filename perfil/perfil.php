@@ -59,9 +59,9 @@
         <section>
           <div class="container">
             <label for="muestra_1" style="font-size: 1.5rem">Cancion test 1:</label><br>
-            <audio controls autoplay src="../assets/cancion/muestra_1.mp3"></audio><br>
+            <audio controls autoplay src="../assets/cancion/Muestra_1.mp3"></audio><br>
             <label for="muestra_1" style="font-size: 1.5rem">Cancion test 2:</label><br>
-            <audio controls autoplay src="../assets/cancion/muestra_2.mp3"></audio><br>
+            <audio controls autoplay src="../assets/cancion/Muestra_2.mp3"></audio><br>
           </div>
         </section>
 
